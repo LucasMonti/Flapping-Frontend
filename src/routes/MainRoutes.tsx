@@ -1,7 +1,7 @@
 import React from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom'
-import Example from "../components/example/example";
-import Example2 from "../components/example/example2";
+import Example from "../components/example/Example";
+import Example2 from "../components/example/Example2";
 
 const MainRoutes = () => {
     return (
