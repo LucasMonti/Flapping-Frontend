@@ -1,0 +1,206 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 970px;
+}
+
+.imgFondo {
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+.content {
+    width: 90%;
+    height: 90%;
+    background: #353535;
+    position: absolute;
+    border: 2px none #9c9c9c;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: Helvetica, Impact, Copperplate, sans-serif;
+}
+
+.contentHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h1 {
+    font-size: 48px;
+    background: linear-gradient(
+            to right,
+            #F11803 0%,
+            #F96105 50%,
+            #FCAF00 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dividerTop {
+    background: #F96105;
+    position: absolute;
+    width: 95%;
+    height: 1px;
+    margin-top: 100px;
+    background: linear-gradient(
+            to right,
+            #F11803 0%,
+            #F96105 50%,
+            #FCAF00 100%
+    );
+}
+
+.contentMain {
+    /*background-color: white;*/
+    width: 100%;
+    height: 700px;
+    /*position: absolute;*/
+    align-self: center;
+    /*margin-top: 150px;*/
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+}
+
+.imgInputs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    background: white;
+    position: absolute;
+}
+
+.inputs {
+    width: 40%;
+    height: 50%;
+    color: #F96105;
+    border: 2px none #9c9c9c;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 30px 0px rgba(249, 97, 5, 0.75);
+    align-self: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
+    margin-left: 10%;
+}
+
+.contentImgText{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.logo {
+    height: 400px;
+    align-self: center;
+}
+
+.text {
+    width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: initial;
+    padding-left: 10%;
+    color: #F96105;
+    font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 18px;
+    background: linear-gradient(
+            to right,
+            #F11803 0%,
+            #F96105 50%,
+            #FCAF00 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.loginTitle {
+    background: linear-gradient(
+            to right,
+            #F11803 0%,
+            #F96105 50%,
+            #FCAF00 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*width: 100%;*/
+    align-self: center;
+}
+
+
+.dividerBot {
+    background: #F96105;
+    position: absolute;
+    width: 95%;
+    height: 1px;
+    /*margin-top: 800px;*/
+    background: linear-gradient(
+            to right,
+            #F11803 0%,
+            #F96105 50%,
+            #FCAF00 100%
+    );
+}
+
+
+.dividerLogin {
+    background: #F96105;
+    width: 95%;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            #F11803 0%,
+            #F96105 50%,
+            #FCAF00 100%
+    );
+}
+
+.loginHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+
+.textField {
+ margin-top: 15%;
+}
+
+
+.footer {
+    width: 100%;
+    /*position: absolute;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textFooter {
+    background: linear-gradient(
+            to right,
+            #F11803 0%,
+            #F96105 50%,
+            #FCAF00 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-self: end;
+    margin-right: 5%;
+}
