@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginCss from './Login.module.css'
 import logoFlapping from '../../flapping-sin-fondo.png'
-import fondo from '../../fondo.jpeg'
+import fondoClaro from '../../fondo-claro.jpeg'
 import {styled, TextField} from "@mui/material";
 
 
@@ -40,7 +40,7 @@ const Login = () => {
 
     return (
         <div className={LoginCss.main}>
-            <img className={LoginCss.imgFondo} src={fondo} alt={fondo}/>
+            {/*<img className={LoginCss.imgFondo} src={fondoClaro} alt={fondoClaro}/>*/}
 
 
             <div className={LoginCss.content}>
