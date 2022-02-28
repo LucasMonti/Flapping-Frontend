@@ -3,24 +3,17 @@
     justify-content: center;
     align-items: center;
     height: 970px;
-    background-color:#F7BD56;
+    background-color: var(--amarillo);
 }
 
-.imgFondo {
-    width: 100%;
-    height: 100%;
-    filter: brightness(50%);
-    z-index: -1;
-}
-
-.content {
+.mainDiv {
     width: 90%;
     height: 90%;
-    background: #dddddd;
+    background: var(--gris-claro);
     position: absolute;
-    border: 2px none #c2c2c2;
+    border: 2px none var(--gris-claro);
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -29,83 +22,49 @@
 }
 
 .contentHeader {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 2%;
 }
 
-h1 {
+.mainTitle {
     font-size: 48px;
-    color: #353535;
-    /*background: linear-gradient(*/
-    /*        to right,*/
-    /*        #F11803 0%,*/
-    /*        #F96105 50%,*/
-    /*        #FCAF00 100%*/
-    /*);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
+    color: var(--gris-oscuro);
 }
 
 .dividerTop {
-    background: #F96105;
-    position: absolute;
     width: 95%;
     height: 1px;
-    margin-top: 100px;
-    color: #F96105;
-    /*background: linear-gradient(*/
-    /*        to right,*/
-    /*        #F11803 0%,*/
-    /*        #F96105 50%,*/
-    /*        #FCAF00 100%*/
-    /*);*/
+    background: linear-gradient(
+            to right,
+            var(--rojo) 0%,
+            var(--naranja) 50%,
+            var(--amarillo) 100%
+    );
 }
 
 .contentMain {
-    /*background-color: white;*/
     width: 100%;
     height: 700px;
-    /*position: absolute;*/
-    align-self: center;
-    /*margin-top: 150px;*/
-    display: flex;
-    flex-direction: row;
-    /*justify-content: center;*/
-}
-
-.imgInputs {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    background: white;
-    position: absolute;
-}
-
-.inputs {
-    width: 40%;
-    height: 50%;
-    color: #F96105;
-    border: 2px none #353535;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 30px 0px #353535;
     align-self: center;
     display: flex;
-    justify-content: start;
+    flex-direction: row;
     align-items: center;
-    flex-direction: column;
-    padding-bottom: 5%;
-    margin-left: 10%;
 }
 
-.contentImgText{
+.contentImgText {
     width: 30%;
     display: flex;
+    height: 80%;
     flex-direction: column;
     justify-content: start;
-
+    background-color: var(--amarillo);
+    margin-left: 3%;
+    border: 2px none var(--gris-oscuro);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
 }
 
 .logo {
@@ -118,63 +77,27 @@ h1 {
     word-wrap: break-word;
     overflow: hidden;
     white-space: initial;
-    padding-left: 10%;
-    color: #353535;
+    padding: 5%;
+    color: var(--gris-oscuro);
     font-family: "Helvetica";
-    font-weight: normal;
+    font-weight: bold;
     font-size: 18px;
-
-    /*background: linear-gradient(*/
-    /*        to right,*/
-    /*        #F11803 0%,*/
-    /*        #F96105 50%,*/
-    /*        #FCAF00 100%*/
-    /*);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
 }
 
-.loginTitle {
-    /*background: linear-gradient(*/
-    /*        to right,*/
-    /*        #F11803 0%,*/
-    /*        #F96105 50%,*/
-    /*        #FCAF00 100%*/
-    /*);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
-    /*width: 100%;*/
+.divInputs {
+    width: 40%;
+    height: 55%;
+    color: var(--naranja);
+    border: 2px none var(--gris-oscuro);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
     align-self: center;
-    color: #353535;
-}
-
-
-.dividerBot {
-    /*background: #F96105;*/
-    position: absolute;
-    width: 95%;
-    height: 1px;
-    color: #353535;
-    /*margin-top: 800px;*/
-    background: linear-gradient(
-            to right,
-            #F11803 0%,
-            #F96105 50%,
-            #FCAF00 100%
-    );
-}
-
-
-.dividerLogin {
-    background: #F96105;
-    width: 95%;
-    height: 1px;
-    background: linear-gradient(
-            to right,
-            #F11803 0%,
-            #F96105 50%,
-            #FCAF00 100%
-    );
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
+    margin-left: 10%;
 }
 
 .loginHeader {
@@ -183,13 +106,70 @@ h1 {
     justify-content: start;
     align-items: center;
     width: 100%;
+    margin-top: 16px;
 }
 
-.textField {
-    width: 70%;
-    margin-top: 15% !important;
-    /*box-shadow: 0px 0px 10px 0px rgba(249, 97, 5, 0.75);*/
+.loginTitle {
+    align-self: center;
+    color: var(--gris-oscuro);
+}
+
+.dividerLogin {
+    width: 95%;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            var(--rojo) 0%,
+            var(--naranja) 50%,
+            var(--amarillo) 100%
+    );
+}
+
+.divInput {
+    width: 75%;
+    height: 15%;
+    margin-top: 10%;
+}
+
+
+.input {
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
+    border-color: var(--naranja);
+    background-color: var(--gris-claro);
+
+}
+
+.input:focus {
+    border: var(--naranja);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+    background-color: var(--gris-claro);
+}
+
+.divButtons {
+    width: 100%;
+    margin-top: 50px;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.button {
+    border-color: var(--naranja);
+    color: var(--naranja);
+}
+
+.button:hover {
+    color: #F96105;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;
+}
+
+.button:active {
+    color: var(--gris-claro);
+    background-color: var(--naranja);
+
 }
 
 
@@ -200,16 +180,24 @@ h1 {
     align-items: center;
 }
 
+
+.dividerBot {
+    position: absolute;
+    width: 95%;
+    height: 1px;
+    color: var(--gris-oscuro);
+    background: linear-gradient(
+            to right,
+            var(--rojo) 0%,
+            var(--naranja) 50%,
+            var(--amarillo) 100%
+    );
+}
+
 .textFooter {
-    /*background: linear-gradient(*/
-    /*        to right,*/
-    /*        #F11803 0%,*/
-    /*        #F96105 50%,*/
-    /*        #FCAF00 100%*/
-    /*);*/
-    /*-webkit-background-clip: text;*/
-    /*-webkit-text-fill-color: transparent;*/
-    color: #353535;
+    color: var(--gris-oscuro);
     align-self: end;
     margin-right: 5%;
+    margin-top: 2%;
 }
+
