@@ -1,0 +1,203 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 970px;
+    background-color: var(--amarillo);
+}
+
+.mainDiv {
+    width: 90%;
+    height: 90%;
+    background: var(--gris-claro);
+    position: absolute;
+    border: 2px none var(--gris-claro);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-family: Helvetica, Impact, Copperplate, sans-serif;
+}
+
+.contentHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.mainTitle {
+    font-size: 48px;
+    color: var(--gris-oscuro);
+}
+
+.dividerTop {
+    width: 95%;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            var(--rojo) 0%,
+            var(--naranja) 50%,
+            var(--amarillo) 100%
+    );
+}
+
+.contentMain {
+    width: 100%;
+    height: 700px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contentImgText {
+    width: 30%;
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--amarillo);
+    margin-left: 3%;
+    border: 2px none var(--gris-oscuro);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
+}
+
+.logo {
+    height: 400px;
+    align-self: center;
+}
+
+.text {
+    width: 100%;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: initial;
+    padding: 5%;
+    color: var(--gris-oscuro);
+    font-family: "Helvetica";
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.divInputs {
+    width: 40%;
+    height: 55%;
+    color: var(--naranja);
+    border: 2px none var(--gris-oscuro);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
+    align-self: center;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
+    margin-left: 10%;
+}
+
+.loginHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    margin-top: 16px;
+}
+
+.loginTitle {
+    align-self: center;
+    color: var(--gris-oscuro);
+}
+
+.dividerLogin {
+    width: 95%;
+    height: 1px;
+    background: linear-gradient(
+            to right,
+            var(--rojo) 0%,
+            var(--naranja) 50%,
+            var(--amarillo) 100%
+    );
+}
+
+.divInput {
+    width: 75%;
+    height: 15%;
+    margin-top: 10%;
+}
+
+
+.input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-color: var(--naranja);
+    background-color: var(--gris-claro);
+
+}
+
+.input:focus {
+    border: var(--naranja);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+    background-color: var(--gris-claro);
+}
+
+.divButtons {
+    width: 100%;
+    margin-top: 50px;
+    padding-right: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.button {
+    border-color: var(--naranja);
+    color: var(--naranja);
+}
+
+.button:hover {
+    color: #F96105;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;
+}
+
+.button:active {
+    color: var(--gris-claro);
+    background-color: var(--naranja);
+
+}
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.dividerBot {
+    position: absolute;
+    width: 95%;
+    height: 1px;
+    color: var(--gris-oscuro);
+    background: linear-gradient(
+            to right,
+            var(--rojo) 0%,
+            var(--naranja) 50%,
+            var(--amarillo) 100%
+    );
+}
+
+.textFooter {
+    color: var(--gris-oscuro);
+    align-self: end;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
