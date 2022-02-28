@@ -2,9 +2,42 @@ import React from 'react';
 import LoginCss from './Login.module.css'
 import logoFlapping from '../../flapping-sin-fondo.png'
 import fondo from '../../fondo.jpeg'
-import {TextField} from "@mui/material";
+import {styled, TextField} from "@mui/material";
+
 
 const Login = () => {
+
+    const CssTextField = styled(TextField)({
+        '& label.Mui-focused': {
+            color: '#F7BD56',
+        },
+        '& .MuiInput-underline:after': {
+            borderBottomColor: '#F7BD56',
+
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: '#353535',
+
+            },
+            '&:hover fieldset': {
+                borderColor: '#F96105',
+
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: '#F7BD56',
+            },
+        },
+        '& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input': {
+            color: '#F7BD56'
+        },
+        '& .MuiInputBase-input-MuiOutlinedInput-input': {
+        color:'#F7BD56'
+    }
+
+    });
+
+
     return (
         <div className={LoginCss.main}>
             <img className={LoginCss.imgFondo} src={fondo} alt={fondo}/>
@@ -33,18 +66,21 @@ const Login = () => {
 
                         </div>
 
-                        <TextField
+
+                        <CssTextField
                             required
                             id="outlined-required"
-                            label="Required"
-                            defaultValue="Hello World"
-                            className={LoginCss.textField}
+                            label="email"
+                            // className={LoginCss.textField}
+                            classes={{root: LoginCss.textField}}
+
                         />
-                        <TextField
+                        <CssTextField
                             required
                             id="outlined-required"
-                            label="Required"
-                            defaultValue="Hello World"
+                            label="password"
+                            variant={"outlined"}
+
                             className={LoginCss.textField}
                         />
                     </div>
