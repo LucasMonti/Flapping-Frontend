@@ -21,8 +21,7 @@ const Login = () => {
                     <div className={LoginCss.contentImgText}>
                         <img src={logoFlapping} alt="logo" className={LoginCss.logo}/>
                         <h2 className={LoginCss.text}>
-                            El aleteo de una mariposa en una parte del mundo puede provocar un tsunami en el otro
-                            extremo. (pensar que agregar acá)
+                            A NEW WORLD CAN START WITH A SIMPLE FLAPPING.
                         </h2>
                     </div>
                     <div className={LoginCss.divInputs}>
