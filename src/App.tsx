@@ -14,9 +14,9 @@ function App() {
         <Navbar/>
         <div className={AppCss.sidebarMain}>
             <Sidebar/>
-            <div className={AppCss.main}>
+            {/*<div className={AppCss.main}>*/}
             <MainRoutes/>
-            </div>
+            {/*</div>*/}
         </div>
         <Footer/>
     </div>

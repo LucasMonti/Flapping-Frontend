@@ -9,7 +9,7 @@ const HomeRoutes = () => {
     const navigate = useNavigate()
 
     const navHome = () => {
-        return navigate('/home')
+        return navigate('/homeState', {state: true})
     }
 
     const navLogin = () => {
@@ -29,6 +29,7 @@ const HomeRoutes = () => {
             <Route path="/home/*" element={<App/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/logout" element={<Navigate state to="/login"/>}/>
+            <Route path="/homeState" element={<Navigate state to="/home"/>}/>
             <Route path="/*" element={<Navigate to="/login"/>}/>
         </Routes>
     );

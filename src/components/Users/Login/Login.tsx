@@ -13,7 +13,7 @@ const Login = () => {
     }
 
     const navHome = () => {
-        return navigate('/home')
+        return navigate('/homeState')
     }
 
     const [email, setEmail] = useState('');
@@ -28,7 +28,6 @@ const Login = () => {
 
         try {
             const loginResponse = await postLogin(loginData)
-            console.log(loginResponse)
             loginResponse && localStorage.setItem('token', loginResponse.data.data.token);
             navHome()
         } catch (e: any) {
