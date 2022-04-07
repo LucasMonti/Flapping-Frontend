@@ -1,0 +1,21 @@
+.sidebar{
+    min-width: 12%;
+    margin: 16px 8px 16px 16px;
+    background-color: var(--gris-claro);
+    border: 2px none var(--gris-oscuro);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 10px 0px var(--gris-oscuro);
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 16px 16px;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    font-size: 24px;
+    margin-right: 8px;
+}

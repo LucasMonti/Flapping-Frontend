@@ -5,6 +5,9 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    height: 100%;
+    background-color: red;
 }
 
 code {
@@ -19,3 +22,8 @@ code {
     --gris-oscuro: #353535;
     --gris-claro: #dddddd;
 }
+
+#root{
+    height: 100vh;
+}
+

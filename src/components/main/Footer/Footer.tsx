@@ -4,7 +4,7 @@ import footerCSS from './Footer.module.css'
 const Footer = () => {
     return (
         <div className={footerCSS.footer}>
-                vybovybrybveivbyeribviybp
+            © Flapping Company, 2022.
         </div>
     );
 };

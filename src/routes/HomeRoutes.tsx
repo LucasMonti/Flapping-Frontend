@@ -1,14 +1,36 @@
-import React from 'react';
-import { Routes, Route, Navigate} from "react-router-dom";
+import {Routes, Route, Navigate, useNavigate} from "react-router-dom";
+import Login from "../components/Users/Login/Login";
 import App from "../App";
-import Login from "../components/Login/Login";
+import Register from "../components/Users/Register/Register";
+import {useEffect} from "react";
 
 const HomeRoutes = () => {
-    return(
+
+    const navigate = useNavigate()
+
+    const navHome = () => {
+        return navigate('/homeState', {state: true})
+    }
+
+    const navLogin = () => {
+        return navigate('/')
+    }
+
+
+    useEffect(() => {
+            const token = localStorage.getItem('token')
+            token ? navHome() : navLogin()
+        }
+        , [])
+
+    return (
         <Routes>
-            <Route path="/*" element={<App/>}/>
             <Route path="/login" element={<Login/>}/>
-            <Route path="/*" element={<Navigate to="/*"/>}/>
+            <Route path="/home/*" element={<App/>}/>
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/logout" element={<Navigate state to="/login"/>}/>
+            <Route path="/homeState" element={<Navigate state to="/home"/>}/>
+            <Route path="/*" element={<Navigate to="/login"/>}/>
         </Routes>
     );
 };

@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 970px;
-    background-color: var(--amarillo);
+    background-color: var(--gris-oscuro);
 }
 
 .mainDiv {
@@ -13,10 +13,10 @@
     position: absolute;
     border: 2px none var(--gris-claro);
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
+    box-shadow: 0px 0px 10px 0px var(--gris-oscuro);
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     font-family: Helvetica, Impact, Copperplate, sans-serif;
 }
@@ -29,7 +29,38 @@
     margin-top: 2%;
 }
 
+.divArrowTitle{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.buttonBack {
+    background-color: var(--gris-claro);
+    border: 2px none var(--gris-claro);
+    width: 10%;
+    margin: 0 0 0 1%;
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;*/
+}
+
+.buttonBack:hover {
+    color: #F96105;
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;*/
+}
+
+.buttonBack:active {
+    color: var(--gris-claro);
+    /*background-color: var(--naranja);*/
+
+}
+
+.iconButton{
+  width: 50% !important;
+}
+
 .mainTitle {
+    margin-left: 40%;
     font-size: 48px;
     color: var(--gris-oscuro);
 }
@@ -55,20 +86,20 @@
 }
 
 .contentImgText {
-    width: 30%;
+    width: 25%;
     display: flex;
-    height: 80%;
+    height: 70%;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     background-color: var(--amarillo);
-    margin-left: 3%;
+    margin-left: 5%;
     border: 2px none var(--gris-oscuro);
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
+    box-shadow: 0px 0px 10px 0px var(--gris-oscuro);
 }
 
 .logo {
-    height: 400px;
+    height: 80%;
     align-self: center;
 }
 
@@ -77,33 +108,41 @@
     word-wrap: break-word;
     overflow: hidden;
     white-space: initial;
-    padding: 5%;
+    padding: 0 15% 0 10%;
     color: var(--gris-oscuro);
     font-family: "Helvetica";
+    font-weight: normal;
+    font-size: 20px;
+    margin-left: 5%;
+
+}
+
+.flapping{
+    color: #F96105;
     font-weight: bold;
-    font-size: 18px;
 }
 
 .divInputs {
     width: 40%;
-    height: 55%;
+    height: 70%;
     color: var(--naranja);
     border: 2px none var(--gris-oscuro);
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 0px 0px 30px 0px var(--gris-oscuro);
+    box-shadow: 0px 0px 10px 0px var(--gris-oscuro);
     align-self: center;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 5%;
     margin-left: 10%;
+    background-color: white;
+    padding-bottom: 1%;
 }
 
 .loginHeader {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     margin-top: 16px;
@@ -127,8 +166,7 @@
 
 .divInput {
     width: 75%;
-    height: 15%;
-    margin-top: 10%;
+    height: 10%;
 }
 
 
@@ -137,28 +175,30 @@
     height: 100%;
     border-radius: 10px;
     border-color: var(--naranja);
-    background-color: var(--gris-claro);
+    background-color: white;
+    color: var(--gris-oscuro);
 
 }
 
 .input:focus {
     border: var(--naranja);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
-    background-color: var(--gris-claro);
+    background-color: white;
+    color: var(--gris-oscuro);
 }
 
 .divButtons {
     width: 100%;
-    margin-top: 50px;
     padding-right: 15%;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .button {
     border-color: var(--naranja);
     color: var(--naranja);
+    margin-left: 3% !important;
 }
 
 .button:hover {
@@ -172,6 +212,26 @@
 
 }
 
+
+.divRegister{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--gris-claro);
+    border-radius: 0 0 10px 10px;
+    padding: 1%;
+    margin: 0;
+}
+
+.registerWord{
+    color: cornflowerblue;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+p{
+    margin: 2%;
+}
 
 .footer {
     width: 100%;
@@ -196,8 +256,10 @@
 
 .textFooter {
     color: var(--gris-oscuro);
-    align-self: end;
+    align-self: flex-end;
     margin-right: 5%;
     margin-top: 2%;
 }
+
+
 

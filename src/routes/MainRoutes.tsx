@@ -1,14 +1,12 @@
 import React from 'react';
 import {Routes, Route, Navigate} from 'react-router-dom'
-import Example from "../components/example/Example";
-import Example2 from "../components/example/Example2";
+import Challenges from "../components/pages/Challenges/Challenges";
 
 const MainRoutes = () => {
     return (
       <Routes>
-           <Route path="/example" element={<Example/>}/>
-           <Route path="/example2" element={<Example2/>}/>
-           <Route path="/*" element={<Navigate to="/example" />}/>
+           <Route path="/" element={<Challenges/>}/>
+           <Route path="/*" element={<Navigate to="/proyects" />}/>
       </Routes>
     )
 };

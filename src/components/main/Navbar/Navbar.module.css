@@ -1,4 +1,35 @@
 .navbar {
-    background: #F7BD56;
-    height:50px;
+    background-color: var(--gris-oscuro);
+    height:70px;
+    box-shadow: 0px 0px 10px 0px var(--gris-oscuro);
+    z-index: +1;
+    display: flex;
+    justify-content: flex-end;
+
 }
+
+.menu{
+    font-size: 24px;
+    color: var(--gris-claro);
+    margin-right: auto;
+}
+
+
+.mainTitle{
+    font-size: 40px;
+    margin-right: 30%;
+    color: var(--gris-claro);
+}
+
+.profileButton{
+    color: var(--gris-claro);
+    align-self: center;
+}
+
+.backButton{
+    color: var(--gris-claro);
+    margin-right: 24px;
+}
+
+
+
