@@ -1,5 +1,5 @@
 .sidebar{
-    width: 12%;
+    min-width: 12%;
     margin: 16px 8px 16px 16px;
     background-color: var(--gris-claro);
     border: 2px none var(--gris-oscuro);
