@@ -4,27 +4,20 @@ import sidebarCss from "../../main/Sidebar/Sidebar.module.css";
 import {getChallenges} from "../../../services/challenges";
 
 const Challenges = () => {
+    const [challenges, setChallenges] = useState([]);
 
-
-    useEffect( () => {
-
-       challengesData()
-
-
-
-
+    useEffect(  () => {
+            getChallenges().then(res => {
+                console.log(res.data.data.challenges)
+                setChallenges(res.data.data.challenges)
+            })
+                return () => {
+                setChallenges([])
+                }
     }, []);
 
-    const challengesData = async () => {
-        try{
-        const challenges = await getChallenges();
 
-        } catch (e) {
-            console.log(e)
-        }
-
-    }
-
+    console.log(2)
     return (
         <div className={challengesCss.container}>
             <div className={challengesCss.filterContainer}>
