@@ -8,6 +8,4 @@ const Login = () => {
     );
 };
 
-
-//test connection
 export default Login;
