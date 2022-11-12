@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e1a432d9-a01f-405b-9e18-cd78b785e87e" name="flapping" url="http://44.206.226.207">
+        <fileTransfer accessType="SFTP" host="44.206.226.207" port="22" sshConfigId="48db72d1-2dae-42d4-a818-b0b2311b1ca4" sshConfig="flapping" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
