@@ -29,40 +29,10 @@
     margin-top: 2%;
 }
 
-.divArrowTitle{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-
-}
-
-.buttonBack {
-    background-color: var(--gris-claro);
-    border: 2px none var(--gris-claro);
-    width: 10%;
-    margin: 0 0 0 1%;
-    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;*/
-}
-
-.buttonBack:hover {
-    color: #F96105;
-    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6) !important;*/
-}
-
-.buttonBack:active {
-    color: var(--gris-claro);
-    /*background-color: var(--naranja);*/
-
-}
-
-.iconButton{
-  width: 50% !important;
-}
-
 .mainTitle {
-    margin-left: 40%;
     font-size: 48px;
     color: var(--gris-oscuro);
+    margin-left: 10%;
 }
 
 .dividerTop {
@@ -115,10 +85,21 @@
     font-size: 20px;
     margin-left: 5%;
 
+
+    /*background: linear-gradient(*/
+    /*        to right,*/
+    /*        var(--rojo) 0%,*/
+    /*        var(--naranja) 50%,*/
+    /*        var(--amarillo) 100%*/
+    /*);*/
+
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+
 }
 
 .flapping{
-    color: #F96105;
+   color: #F96105;
     font-weight: bold;
 }
 
@@ -136,10 +117,9 @@
     flex-direction: column;
     margin-left: 10%;
     background-color: white;
-    padding-bottom: 1%;
 }
 
-.loginHeader {
+.authHeader {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -148,12 +128,12 @@
     margin-top: 16px;
 }
 
-.loginTitle {
+.authTitle {
     align-self: center;
     color: var(--gris-oscuro);
 }
 
-.dividerLogin {
+.dividerAuth {
     width: 95%;
     height: 1px;
     background: linear-gradient(
@@ -166,7 +146,7 @@
 
 .divInput {
     width: 75%;
-    height: 10%;
+    height: 15%;
 }
 
 

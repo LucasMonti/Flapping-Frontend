@@ -1,10 +1,14 @@
 import axios from "axios";
 
 
-export function postRegister(body: any){
-    console.log(body)
-        return axios.post('http://localhost:3001/api/register', body)
+export function registerCompany(body: any){
+        return axios.post('http://localhost:3001/api/companies/create', body)
     }
+
+
+export function registeruser(body: any){
+    return axios.post('http://localhost:3001/api/users/create', body)
+}
 
 
  export function postLogin(body: any){

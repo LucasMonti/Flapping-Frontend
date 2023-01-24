@@ -1,36 +1,34 @@
 import {Routes, Route, Navigate, useNavigate} from "react-router-dom";
-import Login from "../components/Users/Login/Login";
 import App from "../App";
-import Register from "../components/Users/Register/Register";
 import {useEffect} from "react";
+import AuthPage from "../components/auth/AuthPage/AuthPage";
 
 const HomeRoutes = () => {
 
     const navigate = useNavigate()
 
     const navHome = () => {
-        return navigate('/homeState', {state: true})
+        return navigate('/home-state', {state: true})
     }
 
-    const navLogin = () => {
+    const navAuthPage = () => {
         return navigate('/')
     }
 
 
     useEffect(() => {
             const token = localStorage.getItem('token')
-            token ? navHome() : navLogin()
+            token ? navHome() : navAuthPage()
         }
         , [])
 
     return (
         <Routes>
-            <Route path="/login" element={<Login/>}/>
+            <Route path="/auth-page" element={<AuthPage/>}/>
             <Route path="/home/*" element={<App/>}/>
-            <Route path="/register" element={<Register/>}/>
-            <Route path="/logout" element={<Navigate state to="/login"/>}/>
-            <Route path="/homeState" element={<Navigate state to="/home"/>}/>
-            <Route path="/*" element={<Navigate to="/login"/>}/>
+            <Route path="/logout" element={<Navigate state to="/auth-page"/>}/>
+            <Route path="/home-state" element={<Navigate state to="/home"/>}/>
+            <Route path="/*" element={<Navigate to="/auth-page"/>}/>
         </Routes>
     );
 };

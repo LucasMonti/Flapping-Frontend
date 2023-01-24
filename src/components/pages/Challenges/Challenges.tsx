@@ -7,17 +7,17 @@ const Challenges = () => {
     const [challenges, setChallenges] = useState([]);
 
     useEffect(  () => {
-            getChallenges().then(res => {
-                console.log(res.data.data.challenges)
-                setChallenges(res.data.data.challenges)
-            })
-                return () => {
-                setChallenges([])
-                }
+            // getChallenges().then(res => {
+            //     console.log(res.data.data.challenges)
+            //     setChallenges(res.data.data.challenges)
+            // })
+            //     return () => {
+            //     setChallenges([])
+            //     }
     }, []);
 
 
-    console.log(2)
+
     return (
         <div className={challengesCss.container}>
             <div className={challengesCss.filterContainer}>
