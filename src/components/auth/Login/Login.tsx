@@ -1,20 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import LoginCss from "./Login.module.css";
 import logoFlapping from "../../../flapping-sin-fondo.png";
 import { useNavigate } from "react-router-dom";
 import { postLogin } from "../../../services/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { selectRegister } from "../../../App/features/auth/authSlice";
+import { AuthContext } from "../../../context/AuthContext";
 
 const Login = () => {
  
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
+
+  const {setAuth} = useContext(AuthContext)
 
   const navigate = useNavigate();
   const setSelectRegister = () => {
-    dispatch(
-      selectRegister({ name: "Select Register Type", page: "select-register" })
-    );
+    console.log('estoy tocando el select register')
+  setAuth('select-register')
   };
 
   const navHome = () => {

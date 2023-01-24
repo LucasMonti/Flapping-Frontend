@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import AuthPageCss from "./AuthPage.module.css";
 import logoFlapping from "../../../flapping-sin-fondo.png";
 import { useNavigate } from "react-router-dom";
@@ -8,12 +8,15 @@ import Login from "../Login/Login";
 import SelectRegister from "../Register/SelectRegister/SelectRegister";
 import RegisterCompany from "../Register/RegisterCompany/RegisterCompany";
 import RegisterUser from "../Register/RegisterUser/RegisterUser";
+import { AuthContext } from "../../../context/AuthContext";
 
 const AuthPage = () => {
-  const auth = useSelector((state: any) => state.auth);
+  // const auth = useSelector((state: any) => state.auth);
 
-  const authPageSelector = (page: any) => {
-    switch (page) {
+  const {auth} = useContext(AuthContext)
+
+  const authPageSelector = (auth: any) => {
+    switch (auth) {
       case "login":
         return <Login />;
       case "select-register":
@@ -45,11 +48,11 @@ const AuthPage = () => {
           </div>
           <div className={AuthPageCss.divInputs}>
             <div className={AuthPageCss.authHeader}>
-              <h2 className={AuthPageCss.authTitle}>{auth.name}</h2>
+              <h2 className={AuthPageCss.authTitle}>{auth}</h2>
               <div className={AuthPageCss.dividerAuth} />
             </div>
 
-            {authPageSelector(auth.page)}
+            {authPageSelector(auth)}
 
           </div>
         </div>

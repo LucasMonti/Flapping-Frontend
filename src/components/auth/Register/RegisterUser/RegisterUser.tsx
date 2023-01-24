@@ -1,25 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import RegisterCss from "./RegisterUser.module.css";
 import logoFlapping from "../../../../flapping-sin-fondo.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { selectRegister } from "../../../../App/features/auth/authSlice";
 import { registeruser } from "../../../../services/auth";
+import { AuthContext } from "../../../../context/AuthContext";
 
 const Register = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
+  const {setAuth} = useContext(AuthContext)
 
-
-  const navLogin = () => {
-
+  const setSelectregister = () => {
+      setAuth('select-register')
   };
 
 
-  const navComponent = (name: string, page: string) => {
-    dispatch(
-      selectRegister({ name, page })
-    );
+  const setlogin = () => {
+    setAuth('login')
   };
   const [name, setName] = useState("");
   const [lastname, setLastName] = useState("");
@@ -35,7 +34,7 @@ const Register = () => {
     };
     try {
       const userRegistered = await registeruser(registerData);
-      userRegistered && navComponent('Login', 'login');
+      userRegistered && setlogin();
     } catch (e) {
       e && console.log("Hubo un error, por favor intente de nuevo"); //TODO: colocar toast con mensaje de éxito o error.
     }
@@ -100,7 +99,7 @@ const Register = () => {
         <button
           type="button"
           className={`btn btn-outline shadow-none w-25 m-1 ${RegisterCss.button}`}
-          onClick={()=> navComponent('Select Register Type', 'select-register')}
+          onClick={setSelectregister}
         >
           Cancel
         </button>

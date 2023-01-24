@@ -4,39 +4,48 @@ import RegisterCss from "./SelectRegister.module.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { selectRegister } from "../../../../App/features/auth/authSlice";
+import { useContext } from "react";
+import { AuthContext } from "../../../../context/AuthContext";
 // import {postRegister} from "../../../../services/auth";
 
 const SelectRegister = () => {
 
-  const dispatch = useDispatch();
+ 
+    const {setAuth} = useContext(AuthContext)
+ 
+    const setSelectRegister = () => {
+      console.log('estoy tocando el select register')
+    setAuth('login')
+    };
 
-  const setComponent = (name:string, page: string) => {
-    dispatch(
-      selectRegister({ name, page })
-    )
-  };
+    const registerUser = () => {
+      setAuth('register-user')
+    }
 
+    const registerCompany = () => {
+      setAuth('register-company')
+    }
 
   return (
     <div className={RegisterCss.divButtons}>
       <button
         type="button"
         className={`btn btn-outline shadow-none w-25 m-1 ${RegisterCss.button}`}
-        onClick={()=> setComponent('Register as User','register-user')}
+        onClick={ registerUser}
       >
         User
       </button>
       <button
         type="button"
         className={`btn btn-outline shadow-none w-25 m-1 ${RegisterCss.button}`}
-        onClick={()=> setComponent('Register as Company','register-company')}
+        onClick={registerCompany}
       >
         Company
       </button>
       <div className={RegisterCss.divRegister}>
         <p>
           I have a Flapping account.{" "}
-          <a className={RegisterCss.registerWord} onClick={()=> setComponent('Login','login')}>
+          <a className={RegisterCss.registerWord} onClick={setSelectRegister}>
            Login
           </a>
         </p>

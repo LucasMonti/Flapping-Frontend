@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import RegisterCss from "./RegisterCompany.module.css";
 import logoFlapping from "../../../../flapping-sin-fondo.png";
 import { useNavigate } from "react-router-dom";
@@ -6,19 +6,19 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { selectRegister } from "../../../../App/features/auth/authSlice";
 import { registerCompany } from "../../../../services/auth";
+import { AuthContext } from "../../../../context/AuthContext";
 
 const Register = () => {
 
-  const dispatch = useDispatch();
-    const setLoginComponent = () => {
-
+  const {setAuth} = useContext(AuthContext)
+    const setLogin = () => {
+        setAuth('login')
     }
 
-  const navComponent = (name: string, page: string) => {
-    dispatch(
-      selectRegister({ name, page})
-    );
+    const setSelectRegister = () => {
+      setAuth('select-register')
   };
+
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -34,7 +34,7 @@ const Register = () => {
       const companyRegistered = await registerCompany(registerData);
       console.log(companyRegistered);
       
-     companyRegistered && navComponent('Login', 'login')
+     companyRegistered && setLogin()
     } catch (e) {
       e && console.log("Hubo un error, por favor intente de nuevo"); //TODO: colocar toast con mensaje de éxito o error.
     }
@@ -85,7 +85,7 @@ const Register = () => {
         <button
           type="button"
           className={`btn btn-outline shadow-none w-25 m-1 ${RegisterCss.button}`}
-          onClick={()=> navComponent('Select Register Type', 'select-register')}
+          onClick={setSelectRegister}
         >
           Cancel
         </button>
